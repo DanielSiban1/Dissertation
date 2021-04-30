@@ -1,0 +1,17 @@
+<Sysmon schemaversion="4.22">
+  <CheckRevocation/>
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+      <ProcessCreate onmatch="include">
+        <ParentImage name="test" condition="image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</ParentImage>
+         <CommandLine condition="is">C:\Windows\system32\ipconfig.exe</CommandLine>
+        </ProcessCreate>
+    </RuleGroup>   
+    <ProcessTerminate onmatch="include">
+    </ProcessTerminate> 
+  </EventFiltering>
+</Sysmon>
+
+
+
+
